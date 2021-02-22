@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBC919C1-BD22-4F33-BB09-9622BE356CAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nilnul.blob_.excel</RootNamespace>
+    <AssemblyName>nilnul.blob_._excel_._LIB_</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbols4Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Symbols4Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.12.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\DocumentFormat.OpenXml.2.12.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.0.7691.20929, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.collection_._discrete_._LIB_.1.0.7691.20929\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._integer_._LIB_, Version=1.0.7707.25781, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._integer_._LIB_.1.0.7707.25781\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.0.7691.21009, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._quotient_._LIB_.1.0.7691.21009\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._real_._LIB_, Version=2.0.7709.42967, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._real_._LIB_.2.0.7709.42967\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._bit_._LIB_, Version=1.0.7691.1810, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._bit_._LIB_.1.0.7691.1810\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._character_._LIB_, Version=2.1.7691.2637, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._character_._LIB_.2.1.7691.2637\lib\net48\nilnul._character_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._fs_._LIB_, Version=2.0.7715.26743, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._fs_._LIB_.2.0.7715.26743\lib\net48\nilnul._fs_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LIB_, Version=1.0.7715.40319, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._num_._LIB_.1.0.7715.40319\lib\net48\nilnul._num_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LINQ_, Version=1.0.7715.39831, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._num_._LINQ_.1.0.7715.39831\lib\net48\nilnul._num_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._obj_._LIB_, Version=1.0.7715.40630, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.0.7715.40630\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._rel_._LIB_, Version=1.0.7691.2221, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._rel_._LIB_.1.0.7691.2221\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._set_._LIB_, Version=1.0.7713.29308, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._set_._LIB_.1.0.7713.29308\lib\net48\nilnul._set_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._time_._LIB_, Version=1.0.7691.21760, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._time_._LIB_.1.0.7691.21760\lib\net48\nilnul._time_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._txt_._LIB_, Version=1.0.7691.3023, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._txt_._LIB_.1.0.7691.3023\lib\net48\nilnul._txt_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="_nilnul_._LIB_, Version=1.0.7691.1504, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\_nilnul_._LIB_.1.0.7691.1504\lib\net48\_nilnul_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="_nilnul_._LINQ_, Version=1.0.7691.1504, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\_nilnul_._LINQ_.1.0.7691.1504\lib\net48\_nilnul_._LINQ_.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="book\meshs\choose_\BySheet - Copy.cs" />
+    <Compile Include="book\mesh\CelI.cs" />
+    <Compile Include="book\mesh\Dwelt - Copy.cs" />
+    <Compile Include="book\mesh\dwelt\%28retiring\_AsDiagX.cs" />
+    <Compile Include="book\mesh\dwelt\Horizons.cs" />
+    <Compile Include="book\mesh\dwelt\Horizon.cs" />
+    <Compile Include="book\mesh\dwelt\horizons\Choose - Copy.cs" />
+    <Compile Include="book\mesh\dwelt\horizons\sel_\_GetX - Copy.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\cels_\Reified - Copy %282%29.cs" />
+    <Compile Include="book\mesh\dwelt\horizons_\Populated.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\cels_\Nonblank.cs" />
+    <Compile Include="book\mesh\_bloc\diag\_AsDiagX.cs" />
+    <Compile Include="book\mesh_\first\dwelt\horizons\first_\FindHeader.cs" />
+    <Compile Include="book\mesh\MergeCel - Copy.cs" />
+    <Compile Include="book\mesh\MergeCels - Copy.cs" />
+    <Compile Include="book\mesh\Row.cs" />
+    <Compile Include="book\mesh\dwelt\horizons\~\Choose.cs" />
+    <Compile Include="book\mesh\dwelt\horizons_\~\Populated.cs" />
+    <Compile Include="book\mesh\row\cels_\dwelt\Choose.cs" />
+    <Compile Include="book\mesh\row\cels_\Reified.cs" />
+    <Compile Include="book\mesh\row\cel\val_\typed\Get.cs" />
+    <Compile Include="book\mesh\_bloc\Diag.cs" />
+    <Compile Include="book\mesh\_cel\Coord - Copy.cs" />
+    <Compile Include="book\mesh\~\DweltX.cs" />
+    <Compile Include="book\mesh_\First - Copy.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="book\Sheet - Copy.cs" />
+    <Compile Include="book\Mesh.cs" />
+    <Compile Include="book\part_\Workbook.cs" />
+    <Compile Include="book\part_\workbook\_Txts.cs" />
+    <Compile Include="book\SheetI.cs" />
+    <Compile Include="book\meshs\choose_\First.cs" />
+    <Compile Include="book\meshs\choose_\ById.cs" />
+    <Compile Include="book\meshs\choose_\ByName.cs" />
+    <Compile Include="book\mesh\%28retiring\Dwelt.cs" />
+    <Compile Include="book\mesh\Block.cs" />
+    <Compile Include="book\mesh\bloc\ToTblX.cs" />
+    <Compile Include="book\mesh\bloc_\_row\Bounds.cs" />
+    <Compile Include="book\mesh\cels\Choose.cs" />
+    <Compile Include="book\mesh\cel\Coord - Copy.cs" />
+    <Compile Include="book\mesh\cel\val\asTxt\Vw.cs" />
+    <Compile Include="book\mesh\cel\val_\typed\Get - Copy.cs" />
+    <Compile Include="book\mesh\DweltI.cs" />
+    <Compile Include="book\mesh\bloc_\Row.cs" />
+    <Compile Include="book\mesh\bloc_\row\Vals.cs" />
+    <Compile Include="book\mesh\Dwelt.cs" />
+    <Compile Include="book\mesh\~\DweltX - Copy.cs" />
+    <Compile Include="book\mesh\dwelt\%28retiring\Belt.cs" />
+    <Compile Include="book\mesh\dwelt\%28retiring\Belts.cs" />
+    <Compile Include="book\mesh\dwelt\belts\first_\ColsEq.cs" />
+    <Compile Include="book\mesh\dwelt\belts\to_\_TableX.cs" />
+    <Compile Include="book\mesh\dwelt\belts_\_ToTableX.cs" />
+    <Compile Include="book\mesh\dwelt\belt\bunches_\EachSingleCol.cs" />
+    <Compile Include="book\mesh\dwelt\belt\bunch\col\Cels.cs" />
+    <Compile Include="book\mesh\dwelt\belt\bunch\col\_IntersectBlocks.cs" />
+    <Compile Include="book\mesh\dwelt\belt\bunch\Vw.cs" />
+    <Compile Include="book\mesh\dwelt\belt\bunch\Clozures.cs" />
+    <Compile Include="book\mesh\dwelt\belt\Cels.cs" />
+    <Compile Include="book\mesh\dwelt\belt\cols\sel_\%28retring\_TxtX.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col\%28retiring\_TxtX.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col\Cels.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col\val\%28retiring\_GetX.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col\_IntersectBlocks.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col\Val.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col_\mergedNoPre\bunch\range\bound_\_horizontal\_max\RightAt.cs" />
+    <Compile Include="book\mesh\dwelt\belt\Bunch.cs" />
+    <Compile Include="book\mesh\dwelt\belt\co\Pairs.cs" />
+    <Compile Include="book\mesh\dwelt\belt\co\pairs\delWhiteKey\DelWhiteVal.cs" />
+    <Compile Include="book\mesh\dwelt\belt\co\pairs\delWhiteKey\delWhiteVal\keys\Set.cs" />
+    <Compile Include="book\mesh\dwelt\belt\co\pairs\ExceptWhiteKey.cs" />
+    <Compile Include="book\mesh\dwelt\belt\co\pairs\delWhiteKey\delWhiteVal\Keys.cs" />
+    <Compile Include="book\mesh\dwelt\belt\_ConfinesX.cs" />
+    <Compile Include="book\mesh\dwelt\belt\_BunchesX.cs" />
+    <Compile Include="book\mesh\dwelt\cels_\reified\Vw.cs" />
+    <Compile Include="book\mesh\cel\closure\_ClosureX.cs" />
+    <Compile Include="book\mesh\cel\val~\Val.cs" />
+    <Compile Include="book\mesh\cel\Val.cs" />
+    <Compile Include="book\mesh\dwelt\horizons\~\Choose - Copy.cs" />
+    <Compile Include="book\mesh\dwelt\horizons_\~\Populated - Copy.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\cels_\Reified - Copy.cs" />
+    <Compile Include="book\mesh\Matrix.cs" />
+    <Compile Include="book\mesh\row\Drop.cs" />
+    <Compile Include="book\mesh\_bloc\Bounds.cs" />
+    <Compile Include="book\mesh\_cel\%28retiring\Coord - Copy.cs" />
+    <Compile Include="book\mesh\_cel\coord\Eq.cs" />
+    <Compile Include="book\mesh\_cel\coord\VerticalIndex.cs" />
+    <Compile Include="book\mesh\_cel\coord\HorizontalIndex.cs" />
+    <Compile Include="book\mesh\cel\val\display\Read.cs" />
+    <Compile Include="book\mesh\cel\val_\typed\Get.cs" />
+    <Compile Include="book\mesh\dwelt\belt\co_\mapping\find_\AsMapping.cs" />
+    <Compile Include="book\mesh\dwelt\belt\cols\sel_\txt\AsHeaders.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col\val\_GetX.cs" />
+    <Compile Include="book\mesh\dwelt\belts\first_\FindHeader.cs" />
+    <Compile Include="book\mesh\dwelt\confine\%28retiring\TxtX.cs" />
+    <Compile Include="book\mesh\dwelt\confine\val\GetX.cs" />
+    <Compile Include="book\mesh\dwelt\col\Cels.cs" />
+    <Compile Include="book\mesh\dwelt\col\_IntersectBlocks.cs" />
+    <Compile Include="book\mesh\dwelt\ConfineI.cs" />
+    <Compile Include="book\mesh\dwelt\cols_\Hidden.cs" />
+    <Compile Include="book\mesh\dwelt\col\vertical\Cels.cs" />
+    <Compile Include="book\mesh\dwelt\col\cels_\Reified.cs" />
+    <Compile Include="book\mesh\dwelt\col\_GroupsX.cs" />
+    <Compile Include="book\mesh\rows_\Hidden.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col_\MergedNoPreI.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col_\mergedNoPre\bunch\range\bound_\Horizontal.cs" />
+    <Compile Include="book\mesh\dwelt\belt\col_\mergedNoPre\bunch\range\bound_\_horizontal\Max.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\%28retiring\_IntersectBlocks.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\cels\sel_\coords~\Cels - Copy.cs" />
+    <Compile Include="book\mesh\dwelt\_AsDiagX.cs" />
+    <Compile Include="book\mesh\dwelt\_ColsX.cs" />
+    <Compile Include="book\mesh\dwelt\belts\to_\asTable~\_GetRecsX.cs" />
+    <Compile Include="book\mesh\dwelt\cels_\Reified.cs" />
+    <Compile Include="book\mesh\dwelt\Closures.cs" />
+    <Compile Include="book\mesh\dwelt\Belt.cs" />
+    <Compile Include="book\mesh\dwelt\belts\EachTxts.cs" />
+    <Compile Include="book\mesh\dwelt\belt\cols\sel_\_TxtX.cs" />
+    <Compile Include="book\mesh\dwelt\ClosuresI.cs" />
+    <Compile Include="book\mesh\dwelt\belt\cels\sel_\TxtMatrix.cs" />
+    <Compile Include="book\mesh\dwelt\Belts.cs" />
+    <Compile Include="book\mesh\dwelt\confine\Val.cs" />
+    <Compile Include="book\mesh\MergeCel.cs" />
+    <Compile Include="book\mesh\dwelt\horizons\Choose.cs" />
+    <Compile Include="book\mesh\dwelt\horizons_\~\Horizons.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\cels\sel_\coords~\Cels.cs" />
+    <Compile Include="book\meshs\choose_\BySheet.cs" />
+    <Compile Include="book\meshs\Get.cs" />
+    <Compile Include="book\mesh\dwelt\IHorizon.cs" />
+    <Compile Include="book\mesh\dwelt\belts_\rowRangeS\_CompactBeltSX.cs" />
+    <Compile Include="book\mesh\col\Col.cs" />
+    <Compile Include="book\mesh\BlockI.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\cels_\Reified.cs" />
+    <Compile Include="book\mesh\cel\_ClosureX.cs" />
+    <Compile Include="book\mesh\cel\val\Set.cs" />
+    <Compile Include="book\mesh\cel\to_\_AsBlockX.cs" />
+    <Compile Include="book\mesh\cel\closure\val\_GetX.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\_IntersectBlocks.cs" />
+    <Compile Include="book\mesh\dwelt\horizon_\mergedNoPre\belt\BoundingBelt.cs" />
+    <Compile Include="book\mesh\dwelt\horizon_\mergedNoPre\belt\range\bound_\Horizontal.cs" />
+    <Compile Include="book\mesh\dwelt\horizon_\mergedNoPre\belt\range\bound_\vertial\Max.cs" />
+    <Compile Include="book\mesh\dwelt\horizon_\mergedNoPre\belt_\confines\_BeltX.cs" />
+    <Compile Include="book\mesh\Cel.cs" />
+    <Compile Include="book\mesh\dwelt\_AsTableX.cs" />
+    <Compile Include="book\mesh\dwelt_\_AsDiagX.cs" />
+    <Compile Include="book\mesh\cel\_val\Format.cs" />
+    <Compile Include="book\mesh\_cel\_coord\Col.cs" />
+    <Compile Include="book\mesh_\First.cs" />
+    <Compile Include="book\mesh_\first\bloc\dwelt\_DiagX.cs" />
+    <Compile Include="book\mesh_\first\bloc\ToTblX.cs" />
+    <Compile Include="book\mesh\_cel\%28retiring\Coord.cs" />
+    <Compile Include="book\mesh\_cel\Coord.cs" />
+    <Compile Include="book\mesh\_cel\coord\coord\Duo.cs" />
+    <Compile Include="nilnul\Blob.cs" />
+    <Compile Include="nilnul\num\ord_\oneBased_\bijective_\Col.cs" />
+    <Compile Include="book\mesh\_cel\_coord\col\Bound.cs" />
+    <Compile Include="book\mesh\_cel\_coord\_coord\Col.cs" />
+    <Compile Include="book\mesh\_cel\_coord_\_row\Val.cs" />
+    <Compile Include="book\mesh\_cel\_coord_\_col\Val.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\SpanI.cs" />
+    <Compile Include="book\mesh\_cel\_coord_\_row\val\Grow.cs" />
+    <Compile Include="book\mesh\_cel\_coord_\_row\val\Range.cs" />
+    <Compile Include="book\mesh\dwelt\horizon_\MergedNoPreI.cs" />
+    <Compile Include="book\mesh\dwelt\horizons\sel_\_OrdX.cs" />
+    <Compile Include="book\mesh\MergeCels.cs" />
+    <Compile Include="book\mesh\_CelX.cs" />
+    <Compile Include="book\mesh\_cel\_coord_\RowI.cs" />
+    <Compile Include="book\mesh\cel\val\Get.cs" />
+    <Compile Include="book\mesh\_cel\_coord_\ColI.cs" />
+    <Compile Include="book\mesh\dwelt\horizon\span_\BasicExtra.cs" />
+    <Compile Include="book\mesh\DweltX.cs" />
+    <Compile Include="nilnul\blob_\csv_\cannonized\OnTbl - Copy.cs" />
+    <Compile Include="nilnul\blob_\csv_\cannonized\OnTbl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="~\Book - Copy.cs" />
+    <Compile Include="~\DocX - Copy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="book\meshs\filter_\" />
+    <Folder Include="book\meshs\fro_\" />
+    <Folder Include="book\mesh\cel\%28retring\" />
+    <Folder Include="book\mesh\cel\get_\" />
+    <Folder Include="book\mesh\cel\val_\typed\get_\" />
+    <Folder Include="book\mesh\dwelt\belts_\headed_\" />
+    <Folder Include="book\mesh\dwelt\belts_\table_\byFirst\" />
+    <Folder Include="book\mesh\dwelt\belt\bunches\" />
+    <Folder Include="book\mesh\dwelt\belt\bunch\cels\" />
+    <Folder Include="book\mesh\dwelt\belt\col_\mergedNoPre\%28retiring\" />
+    <Folder Include="book\mesh\dwelt\belt\confines\" />
+    <Folder Include="book\mesh\dwelt\belt\recs\" />
+    <Folder Include="book\mesh\dwelt\belt\_recs\" />
+    <Folder Include="book\mesh\dwelt\bloc0nul\" />
+    <Folder Include="book\mesh\dwelt\blocs_\" />
+    <Folder Include="book\mesh\dwelt\bloc_\" />
+    <Folder Include="book\mesh\dwelt\col\grps\" />
+    <Folder Include="book\mesh\dwelt\col\vertical\heading\" />
+    <Folder Include="book\mesh\dwelt\confine_\" />
+    <Folder Include="book\mesh\dwelt\horizons\dwelt\" />
+    <Folder Include="book\mesh\dwelt\horizons\first_\" />
+    <Folder Include="book\mesh\dwelt\horizons\_choose_\" />
+    <Folder Include="book\mesh\dwelt\horizon\be_\" />
+    <Folder Include="book\mesh\dwelt\horizon\cels\sel_\val_\" />
+    <Folder Include="book\mesh\dwelt\horizon\cels_\nonblank\" />
+    <Folder Include="book\mesh\dwelt\horizon\cels_\reified\" />
+    <Folder Include="book\mesh\dwelt\horizon\cels_\_reified_\" />
+    <Folder Include="book\mesh\dwelt\horizon\nulable\" />
+    <Folder Include="book\mesh\dwelt\horizon\_cels_\" />
+    <Folder Include="book\mesh\dwelt\horizon\_get_\" />
+    <Folder Include="book\mesh\dwelt\horizon\_index\" />
+    <Folder Include="book\mesh\dwelt\horizon_\mergedNoPre\%28retiring\" />
+    <Folder Include="book\mesh\dwelt\horizon_\mergedNoPre\belt\NewFolder1\" />
+    <Folder Include="book\mesh\dwelt\horizon_\mergedNoPre\belt\range\rowBound\" />
+    <Folder Include="book\mesh\dwelt\horizon_\mergedNoPre\boundingBelt\" />
+    <Folder Include="book\mesh\dwelt\NewFolder1\" />
+    <Folder Include="book\mesh\dwelt\_cols\" />
+    <Folder Include="book\mesh\dwelt\_dim\" />
+    <Folder Include="book\mesh\dwelt\_rows\" />
+    <Folder Include="book\mesh\dwelt\_row\" />
+    <Folder Include="book\mesh\dwelt\_row_\" />
+    <Folder Include="book\mesh\range_\" />
+    <Folder Include="book\mesh\rows\" />
+    <Folder Include="book\mesh\row\cels\vals\" />
+    <Folder Include="book\mesh\_bloc\bounds_\" />
+    <Folder Include="book\mesh\_cel\coord\coord\duo\be_\" />
+    <Folder Include="book\mesh\_cel\coord_\" />
+    <Folder Include="book\mesh\_cel\ord_\" />
+    <Folder Include="book\mesh\_cel\_coord\col\%28retiring\" />
+    <Folder Include="book\mesh\_cel_\" />
+    <Folder Include="book\mesh\_dim\_horizontal\col\val\" />
+    <Folder Include="book\mesh\_dwelt\" />
+    <Folder Include="book\mesh\_dwelt_\" />
+    <Folder Include="book\mesh_\first\cel\val\" />
+    <Folder Include="book\part_\workbook\txts\" />
+    <Folder Include="book\_sheet\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="PostBuildMacros">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="Targets" />
+    </GetAssemblyIdentity>
+    <ItemGroup>
+      <VersionNumber Include="@(Targets->'%(Version)')" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+			$(PostBuildEventDependsOn);
+			PostBuildMacros;
+		</PostBuildEventDependsOn>
+    <PostBuildEvent>
+			if $(ConfigurationName) == Release (
+				if NOT "$(SolutionDir)" == "$(MSBuildProjectDirectory)\" (
+					xcopy /Y /E /D /I "$(SolutionDir)\packages\*.*" "$(MSBuildProjectDirectory)\packages\"
+				)
+				"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName)
+				"NuGet.exe" push $(TargetName).@(VersionNumber).nupkg -Source local
+				"NuGet.exe" push $(TargetName).@(VersionNumber).nupkg -Source wyt
+			) ELSE (
+				if $(ConfigurationName) == Symbols4Debug (
+					if NOT "$(SolutionDir)" == "$(MSBuildProjectDirectory)\" (
+						xcopy /Y /E /D /I "$(SolutionDir)\packages\*.*" "$(MSBuildProjectDirectory)\packages\"
+					)
+					"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName)
+					"NuGet.exe" push $(TargetName).@(VersionNumber).symbols.nupkg -Source local
+					"NuGet.exe" push $(TargetName).@(VersionNumber).symbols.nupkg -Source wyt
+				) ELSE (
+					echo $(VersionNumber)
+				)
+			)
+
+			rem "NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Symbol -OutputDirectory ..\..
+
+			rem del $(ProjectDir)bin\$(ConfigurationName) \*.nupkg
+
+			rem forfiles /P $(ProjectDir)bin\$(ConfigurationName)\ /m *.nupkg /c "cmd /c "NuGet.exe" push @FILE -Source local"
+			rem forfiles /P $(ProjectDir)bin\$(ConfigurationName)\ /m *.nupkg /c "cmd /c "NuGet.exe" push @FILE -Source wyt"
+		</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <Import Project="..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="my" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=my;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="nilnul.blob_._excel_._TEST_.Properties.Settings" SettingsPropertyName="myConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="nilnul.Task1" Member="Task1s">
+    <Type Name="Task1">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="note" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[_time]" Member="_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[_note]" Member="_note1" Storage="__note" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
